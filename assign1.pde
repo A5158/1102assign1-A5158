@@ -24,21 +24,21 @@ void setup() {
   lasera=laserx+15;
   size(640, 480, P2D);
   PImage sky; //sky image
-  sky=loadImage("bg.jpg");
+  sky=loadImage("img/bg.jpg");
   image(sky,0,0,640,480);
   PImage soil; //soil image
-  soil=loadImage("soil.png");
+  soil=loadImage("img/soil.png");
   image(soil,0,160,640,320);
   noStroke(); //grass
   fill(124,402,25);
   rect(0,145,640,15);
   PImage heart; //life image
-  heart= loadImage("life.png");
+  heart= loadImage("img/life.png");
   image(heart,10,10,50,51);
   image(heart,80,10,50,51);
   image(heart,150,10,50,51);
   PImage groundhog; //groundhhog image
-  groundhog=loadImage("groundhog.png");
+  groundhog=loadImage("img/groundhog.png");
   image(groundhog,280,80,80,80);
   
   noStroke(); //sun
@@ -56,15 +56,15 @@ void draw() {
   }    
  
   PImage soil; //soil image
-  soil=loadImage("soil.png");
+  soil=loadImage("img/soil.png");
   image(soil,0,160,640,320);
   //soildier random place
   PImage soldier;
-  soldier=loadImage("soldier.png");
+  soldier=loadImage("img/soldier.png");
   image(soldier,soldierx+=3,soldiery,80,80);
   //robot
   PImage robot;
-  robot=loadImage("robot.png");
+  robot=loadImage("img/robot.png");
   image(robot,robotx,roboty,80,80);
   //laser
   

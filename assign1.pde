@@ -72,15 +72,15 @@ void draw() {
   
   strokeWeight(10);
   stroke(255,0,0);
-  line (lasera ,roboty+40,laserx+20,roboty+40);
+  line (lasera ,roboty+37,laserx+25,roboty+37);
   laserx=laserx-2;
   lasera=lasera-3;
   if(laserx<=robotx-160){
     laserx=robotx;
     lasera=laserx+15;
   }
-  if(laserx-lasera>=4){
-    lasera=laserx-4;
+  if(laserx-lasera>=15){
+    lasera=laserx-15;
    }
 
 }

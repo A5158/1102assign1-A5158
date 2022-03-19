@@ -72,7 +72,7 @@ void draw() {
   
   strokeWeight(10);
   stroke(255,0,0);
-  line (laserA ,robotY+37,laserX,robotY+37);
+  line (laserA+25 ,robotY+37,laserX+25,robotY+37);
   laserX=laserX-2;
   laserA=laserA-4;
   if(laserX<=robotX-160){

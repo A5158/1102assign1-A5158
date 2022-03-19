@@ -21,7 +21,7 @@ void setup() {
   int f=floor(random(6))*80;
   robotX=e+f;
   laserX=robotX;
-  laserA=laserX+15;
+  laserA=laserX;
   size(640, 480, P2D);
   PImage sky; //sky image
   sky=loadImage("img/bg.jpg");
@@ -72,15 +72,15 @@ void draw() {
   
   strokeWeight(10);
   stroke(255,0,0);
-  line (laserA ,robotY+37,laserX+25,robotY+37);
+  line (laserA ,robotY+37,laserX,robotY+37);
   laserX=laserX-2;
-  laserA=laserA-3;
+  laserA=laserA-4;
   if(laserX<=robotX-160){
     laserX=robotX;
-    laserA=laserX+15;
+    laserA=laserX;
   }
-  if(laserX-laserA>=15){
-    laserA=laserX-15;
+  if(laserX-laserA>=40){
+    laserA=laserX-40;
    }
 
 }

@@ -1,27 +1,27 @@
-int soldierx;
-int soldiery;
-int robotx;
-int roboty;
+int soldierX;
+int soldierY;
+int robotX;
+int robotY;
 //laser
-  int laserx;
-  int lasera;
+  int laserX;
+  int laserA;
 void setup() {
     //soildier random place
   int a;
   a=160;
   int b = floor(random(4))*80;
-  soldiery=a+b;
-  soldierx=0;
+  soldierY=a+b;
+  soldierX=0;
   int c;
   c=160;
   int d=floor(random(4))*80;
-  roboty=c+d;
+  robotY=c+d;
   int e;
   e=160;
   int f=floor(random(6))*80;
-  robotx=e+f;
-  laserx=robotx;
-  lasera=laserx+15;
+  robotX=e+f;
+  laserX=robotX;
+  laserA=laserX+15;
   size(640, 480, P2D);
   PImage sky; //sky image
   sky=loadImage("img/bg.jpg");
@@ -51,8 +51,8 @@ void setup() {
 
 void draw() {
   
-  if (soldierx>=640){
-    soldierx=-80;
+  if (soldierX>=640){
+    soldierX=-80;
   }    
  
   PImage soil; //soil image
@@ -61,26 +61,26 @@ void draw() {
   //soildier random place
   PImage soldier;
   soldier=loadImage("img/soldier.png");
-  image(soldier,soldierx+=3,soldiery,80,80);
+  image(soldier,soldierX+=3,soldierY,80,80);
   //robot
   PImage robot;
   robot=loadImage("img/robot.png");
-  image(robot,robotx,roboty,80,80);
+  image(robot,robotX,robotY,80,80);
   //laser
   
   
   
   strokeWeight(10);
   stroke(255,0,0);
-  line (lasera ,roboty+37,laserx+25,roboty+37);
-  laserx=laserx-2;
-  lasera=lasera-3;
-  if(laserx<=robotx-160){
-    laserx=robotx;
-    lasera=laserx+15;
+  line (laserA ,robotY+37,laserX+25,robotY+37);
+  laserX=laserX-2;
+  laserA=laserA-3;
+  if(laserX<=robotX-160){
+    laserX=robotX;
+    laserA=laserX+15;
   }
-  if(laserx-lasera>=15){
-    lasera=laserx-15;
+  if(laserX-laserA>=15){
+    laserA=laserX-15;
    }
 
 }
